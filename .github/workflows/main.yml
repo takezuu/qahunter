@@ -21,4 +21,4 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh -i ~/.ssh/id_ed25519 root@78.153.150.29 'sudo bash /root/deploy.sh'
+          ssh -i ~/.ssh/id_ed25519 root@78.153.150.29 'sudo bash /home/qahunter/deploy.sh'
