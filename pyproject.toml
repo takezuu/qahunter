@@ -1,0 +1,8 @@
+[project]
+name = "qahunter"
+version = "0.1.0"
+description = "qahunter"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+]
