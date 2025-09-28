@@ -1,9 +1,9 @@
-from typing import Union
 from typing import Annotated
 from fastapi import Request
 from fastapi.exceptions import RequestValidationError
-from sqlmodel import Session, select
+
 from fastapi import FastAPI, Depends
+from sqlmodel.ext.asyncio.session import AsyncSession
 from starlette import status
 from starlette.responses import JSONResponse
 
@@ -11,7 +11,6 @@ from src.database import get_session
 from src.routes import projects
 
 app = FastAPI()
-SessionDep = Annotated[Session, Depends(get_session)]
 app.include_router(projects.router)
 
 @app.get("/")
